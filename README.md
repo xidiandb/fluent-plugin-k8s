@@ -1,6 +1,6 @@
-# fluent-plugin-myscrub [![Gem Version](https://badge.fury.io/rb/fluent-plugin-myscrub.svg)](https://rubygems.org/gems/fluent-plugin-myscrub)
+# fluent-plugin-myscrub [![Gem Version](https://badge.fury.io/rb/fluent-plugin-k8s.svg)](https://rubygems.org/gems/fluent-plugin-k8s)
 
-Fluent plugin for drop a event that include a invalid bytes in utf-8
+Fluent plugin for get simple metadata of k8s
 
 
 ## Installation
@@ -8,13 +8,13 @@ Fluent plugin for drop a event that include a invalid bytes in utf-8
 
 Install it yourself as:
 
-    $ gem install fluent-plugin-myscrub
+    $ gem install fluent-plugin-k8s
 
 ## Configuration
 
 ```
 <filter **>
-  @type myscrub
+  @type k8s
 </filter>
 ```
 
@@ -22,15 +22,17 @@ Install it yourself as:
 
 ```
 <source>
-  type forward
+  @type file
+  ...
+  tag raw.kubernetes.**
 </source>
 
-<filter **>
-  type myscrub
+<filter raw.kubernetes.**>
+  @type k8s
 </filter>
 
 <match **>
-  type stdout
+  @type stdout
 </match>
 ```
 
