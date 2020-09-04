@@ -1,4 +1,4 @@
-# fluent-plugin-myscrub [![Gem Version](https://badge.fury.io/rb/fluent-plugin-k8s.svg)](https://rubygems.org/gems/fluent-plugin-k8s)
+# fluent-plugin-k8s[![Gem Version](https://badge.fury.io/rb/fluent-plugin-k8s.svg)](https://rubygems.org/gems/fluent-plugin-k8s)
 
 Fluent plugin for get simple metadata of k8s
 
