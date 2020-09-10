@@ -23,7 +23,7 @@ Install it yourself as:
 ```xml
 <source>
   @type file
-  path /car/log/containers/*.log
+  path /var/log/containers/*.log
   tag raw.kubernetes.**
 </source>
 
