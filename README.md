@@ -12,7 +12,7 @@ Install it yourself as:
 
 ## Configuration
 
-```
+```xml
 <filter **>
   @type k8s
 </filter>
@@ -20,10 +20,10 @@ Install it yourself as:
 
 ## Usage
 
-```
+```xml
 <source>
   @type file
-  ...
+  path /car/log/containers/*.log
   tag raw.kubernetes.**
 </source>
 
@@ -36,4 +36,12 @@ Install it yourself as:
 </match>
 ```
 
+The k8S you can get include POD name, namespace, Container name, and dockerId.
 
+```json
+{
+"pod_name": "influxdb-1",
+"namespace_name": "monitoring",
+"container_name": "influxdb"
+}
+```
